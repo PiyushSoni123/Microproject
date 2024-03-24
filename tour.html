@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Dosis', Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #31363F;
+            color: #ffffff;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        
+        header h1 {
+            margin: 0;
+            flex: 1;
+            font-family: 'Rubik Doodle Shadow', cursive; /* Applying Rubik Doodle Shadow font for title */
+            font-weight: normal; /* Resetting font weight for the title */
+        }
+        
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        nav a {
+            color: #ffffff;
+            font-family: 'Dosis', Arial, sans-serif;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .expand-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            background-image: url("C:\Users\PC\Desktop\menu.png");
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .section1 .overlay {
+                display: none;
+            }
+            .expand-btn {
+                display: block;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            nav.active {
+                display: flex;
+            }
+        }
+        
+        .section2 {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .tour {
+            width: 50%;
+            margin: 10px;
+            background-color: #dddddd;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        .tour h2 {
+            margin-top: 0;
+        }
+        
+        .tour img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .tour {
+                width: 90%;
+            }
+        }
+        
+        footer {
+            background-color: #31363F;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+            font-weight: 400; /* Applying regular weight for footer text */
+        }
+	.mail{
+	color: white;
+	text-decoration: none;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trek'nTrail</h1>
+        <button class="expand-btn" onclick="toggleNav()"></button>
+        <nav>
+            <b>
+                <a class="page1" href="index.html">Home</a>
+                <a class="page2" href="tour.html">Tours</a>
+                <a class="page3" href="contact.html">Contact</a>
+            </b>
+        </nav>
+    </header>
+    <section class="section2">
+        <div class="tour">
+            <h2>Osaka Tour</h2>
+            <img src="https://a1.cdn.japantravel.com/photo/9163-59999/1000/osaka-mystic-night-views-of-osaka-castle-59999.jpg" alt="Osaka Tour Image">
+            <p>Wanna escape the wilderness of the city, take a chill pill and visit the village side of Japan for 4 Days and 5 Nights at just <b>$4999</b></p>
+        </div>
+        <div class="tour">
+            <h2>Egypt Tour</h2>
+            <img src="https://media.istockphoto.com/id/177047347/photo/the-pyramids-of-giza.jpg?s=612x612&w=0&k=20&c=sNOn3ruKWcJD1bqi4AVgU7yNt7nChIA30oLfUfsZ4Ro=" alt="Egypt Tour Image">
+            <p>Explore the mystique of ancient history amidst the grandeur of the pyramids and Nile River on our Egypt Tour. Book your adventure now! at just <b>$5,449</b></p>
+        </div>
+        <div class="tour">
+            <h2>NYC Tour</h2>
+            <img src="https://images.pexels.com/photos/534757/pexels-photo-534757.jpeg?cs=srgb&dl=pexels-kai-pilger-534757.jpg&fm=jpg" alt="NYC Tour Image">
+            <p>Experience the hustle and bustle of the Big Apple with our NYC Tour. Dive into the vibrant culture, iconic landmarks, and endless entertainment! at just <b>$6,999</b></p>
+        </div>
+        <div class="tour">
+            <h2>Kerala Tour</h2>
+            <img src="https://cdn1.tripoto.com/media/filter/tst/img/2245490/Image/1689359543_kerala.jpg.webp" alt="Kerala Tour Image">
+            <p>Embark on a serene journey through the picturesque backwaters and lush greenery of Kerala, India. Join us for an unforgettable experience! at just <b>$2,000</b></p>
+        </div>
+        <div class="tour">
+            <h2>Australia Tour</h2>
+            <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/474000/474772-Australia.jpg" alt="Australia Tour Image">
+            <p>Discover the diverse landscapes, stunning beaches, and unique wildlife of Australia on our captivating tour. Book your adventure now! at just <b>$4,499</b></p>
+        </div>
+        <div class="tour">
+            <h2>France Tour</h2>
+            <img src="https://www.mlenny.com/wp-content/uploads/248080412_603979764083938_7974834690653241_n.jpg" alt="France Tour Image">
+            <p>Indulge in the romantic charm, exquisite cuisine, and rich history of France with our immersive tour. Join us for an enchanting journey! at just <b>$5,999</b></p>
+        </div>
+    </section>
+    <footer>
+<p>©Trek'nTrail</p>
+<a  class="mail" href="mailto:sonipiyush8510@gmail.com"> sonipiyush8510@gmail.com</a>
+</footer>
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

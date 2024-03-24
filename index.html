@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Dosis', Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #31363F;
+            color: #ffffff;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        
+        header h1 {
+            margin: 0;
+            flex: 1;
+            font-family: 'Rubik Doodle Shadow', cursive; /* Applying Rubik Doodle Shadow font for title */
+            font-weight: normal; /* Resetting font weight for the title */
+        }
+        
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        nav a {
+            color: #ffffff;
+	    font-family: 'Dosis', Arial, sans-serif;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .expand-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            background-image: url("C:\Users\PC\Desktop\menu.png");
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .section1 .overlay {
+                display: none;
+            }
+            .expand-btn {
+                display: block;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            nav.active {
+                display: flex;
+            }
+        }
+        
+        .section1 {
+            position: relative;
+        }
+        
+        .section1 img.main {
+            width: 100%;
+            height: auto;
+        }
+        
+        .section1 .overlay {
+            display: none;
+            position: absolute;
+            top: 10%;
+            margin: 10px;
+            left: 0;
+            bottom: 0;
+            width: 30%;
+            height: auto;
+            max-height: 50%;
+            background-color: rgba(150, 150, 150, 0.5);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            overflow: auto;
+            font-weight: 500; /* Applying regular weight for paragraphs */
+        }
+        
+        .section1 .overlay h1 {
+            margin: 0;
+            font-weight: 900; /* Applying heavier weight for the heading */
+        }
+
+        @media screen and (min-width: 601px) {
+            .section1 .overlay {
+                display: flex;
+            }
+        }
+        
+        .section2 {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .tour {
+            width: 50%;
+            margin: 10px;
+            background-color: #dddddd;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        .tour h2 {
+            margin-top: 0;
+        }
+        
+        .tour img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+		.section1 .overlay {
+                display: none;
+            }
+            .tour {
+                width: 90%;
+            }
+        }
+        
+        footer {
+            background-color: #31363F;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+            font-weight: 400; /* Applying regular weight for footer text */
+        }
+	.tele{
+	padding: 10px;
+	background-color: #31363F;
+	color: #ffffff;
+	text-decoration: none;
+ 	}
+	.tele:hover{
+	background-color: #474a4f;
+	}
+	.tour .tele{
+	display:flex;
+	justify-content: center;
+	}
+	.mail{
+	color: white;
+	text-decoration: none;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trek'nTrail</h1>
+        <button class="expand-btn" onclick="toggleNav()"></button>
+        <nav><b>
+            <a class="page1" href="index.html">Home</a>
+                <a class="page2" href="tour.html">Tours</a>
+                <a class="page3" href="contact.html">Contact</a>
+		</b>
+        </nav>
+    </header>
+    <section class="section1">
+        <div class="overlay">
+            <h1>Travel Smarter</h1>
+		<p>Travel Smarter is not just a claim, but a promise. Bestow us the trouble of planning your travel, so you can maximize your time spent with utmost luxury</p>
+</div>
+<img class="main" src="C:\Users\PC\Downloads\Project\main.png">
+</section>
+<section class="section2">
+<div class="tour">
+            <h2>Osaka Tour</h2>
+            <img src="https://a1.cdn.japantravel.com/photo/9163-59999/1000/osaka-mystic-night-views-of-osaka-castle-59999.jpg" alt="Osaka Tour Image">
+            <p>Wanna escape the wilderness of the city, take a chill pill and visit the village side of Japan for 4 Days and 5 Nights at just <b>$4999</b></p>
+        </div>
+ <div class="tour">
+            <h2>Egypt Tour</h2>
+            <img src="https://media.istockphoto.com/id/177047347/photo/the-pyramids-of-giza.jpg?s=612x612&w=0&k=20&c=sNOn3ruKWcJD1bqi4AVgU7yNt7nChIA30oLfUfsZ4Ro=" alt="Egypt Tour Image">
+            <p>Explore the mystique of ancient history amidst the grandeur of the pyramids and Nile River on our Egypt Tour. Book your adventure now! at just <b>$5,449</b></p>
+        </div>
+        <div class="tour">
+            <h2>NYC Tour</h2>
+            <img src="https://images.pexels.com/photos/534757/pexels-photo-534757.jpeg?cs=srgb&dl=pexels-kai-pilger-534757.jpg&fm=jpg" alt="NYC Tour Image">
+            <p>Experience the hustle and bustle of the Big Apple with our NYC Tour. Dive into the vibrant culture, iconic landmarks, and endless entertainment! at just <b>$6,999</b></p>
+        </div>
+	<div class="tour">
+	<h3>Wanna look at more tours? press the button below!</h3>
+	<a class="tele" href="tour.html">Tours</a>
+	</div>
+</section>
+<footer>
+<p>©Trek'nTrail</p>
+<a  class="mail" href="mailto:sonipiyush8510@gmail.com"> sonipiyush8510@gmail.com</a>
+</footer>
+<script>
+function toggleNav() {
+const nav = document.querySelector('nav');
+nav.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
+

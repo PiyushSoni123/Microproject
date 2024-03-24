@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Dosis', Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #31363F;
+            color: #ffffff;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        
+        header h1 {
+            margin: 0;
+            flex: 1;
+            font-family: 'Rubik Doodle Shadow', cursive;
+            font-weight: normal;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-family: 'Dosis', Arial, sans-serif;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .expand-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            background-image: url("C:\Users\PC\Desktop\menu.png");
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .section1 .overlay {
+                display: none;
+            }
+            .expand-btn {
+                display: block;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            nav.active {
+                display: flex;
+            }
+	.feedback-input {
+            width: 91%;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        }
+
+        footer {
+            background-color: #31363F;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #31363F;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .feedback-input {
+            width: 96%;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .feedback-input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+	.contact-info .mail{
+		text-decoration: none;
+		color: black;
+		}
+		.mail{
+	color: white;
+	text-decoration: none;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trek'nTrail</h1>
+        <button class="expand-btn" onclick="toggleNav()"></button>
+        <nav>
+            <b>
+                <a class="page1" href="index.html">Home</a>
+                <a class="page2" href="tour.html">Tours</a>
+                <a class="page3" href="contact.html">Contact</a>
+            </b>
+        </nav>
+    </header>
+    
+    <div class="contact-info">
+	<h2>About Website</h2>
+	<p>"Trek'nTrail" is designed by me, the website is a static "responsive" but "non-functional" website, this website contains some pretty pictures (fact checked by me) and is well structured. </p>
+	<h2>About Me</h2>
+	<p>I'm your not so average 16 yo, this website can be served as a testament of my skills in web-development (which is mediocre), I have many hobbies and programming and web-developing are one of them, the other being doing maths, gaming, wriiting book and gaining knowledge on something so obscure that one few handful people would know about it. Overall, I pass my day in my room locked inside it, isolated from the outside world. I really like it. I would describe myself as a logical yet sometimes irrational person who goes back and forth from "it's so over" to "we ballin".</p>
+        <h2>Contact Information</h2>
+        <p><b>Name:</b> Piyush Soni (a.k.a Baku Madarame)</p>
+        <p><b>Email:</b><a  class="mail" href="mailto:sonipiyush8510@gmail.com"> sonipiyush8510@gmail.com</a></p>
+        <p><b>Phone:</b> not so early man</p>
+        <div class="social-links">
+            <a href="https://github.com/piyush-soni318"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/piyush_7002_/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <textarea class="feedback-input" placeholder="Your feedback"></textarea>
+        <button class="submit-btn" onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <footer>
+<p>©Trek'nTrail</p>
+<a  class="mail" href="mailto:sonipiyush8510@gmail.com"> sonipiyush8510@gmail.com</a>
+</footer>
+
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        function submitFeedback() {
+            alert("Feedback submitted");
+        }
+    </script>
+</body>
+</html>
